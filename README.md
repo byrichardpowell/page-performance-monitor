@@ -1,6 +1,6 @@
 # Page Performance Monitor
 
-Monitor the performance of page load/render.  For now you will need to implement your own backend. I am still working on a backend for this this.
+Monitor the performance of page load/render.  For now you will need to implement your own backend. I am still working on a backend for this.
 
 ## Local Usage
 
@@ -14,7 +14,7 @@ Developing:
 
 1. `npm run watch`
 2. Open a browser at `http://localhost:4000/watch/index.html`
-3. Edit the files in the src folder.
+3. Edit the files in the src folder
 
 ## Production usage
 
@@ -58,15 +58,15 @@ I’ve tried to reduce the number of stats to those that I deem useful, specific
 
 Performance is reported with a sessionId so you should be able to track the same session to multiple page loads.
 
-To store this data you will need to implement your own backend. This would be an API endpoint which accepts post requests and parses the data in the following format.
+To store this data you will need to implement your own backend. This would be an API endpoint which accepts post requests and passes the data in the following format.
 
-encoded:
+Encoded:
 
 ````
 http://yourendpoint.com/?sessionId=55967c62-0b6a-4aaf-adb6-c8cf1bd7b34e&events={%22unit%22:%22ms%22,%22tag%22:%22load%22,%22x%22:1472464023528,%22y%22:{%22unloadEnd%22:16,%22redirectEnd%22:0,%22requestStart%22:9,%22responseEnd%22:16,%22domLoading%22:23,%22domInteractive%22:242,%22domContentLoadedEnd%22:243,%22domComplete%22:270,%22loadEnd%22:274}}
 ````
 
-decoded:
+Decoded:
 
 ````
 http://yourendpoint.com/?sessionId=55967c62-0b6a-4aaf-adb6-c8cf1bd7b34e&events={"unit":"ms","tag":"load","x":1472464023528,"y":{"unloadEnd":16,"redirectEnd":0,"requestStart":9,"responseEnd":16,"domLoading":23,"domInteractive":242,"domContentLoadedEnd":243,"domComplete":270,"loadEnd":274}}
@@ -76,11 +76,11 @@ http://yourendpoint.com/?sessionId=55967c62-0b6a-4aaf-adb6-c8cf1bd7b34e&events={
 
 This code has learnt a lot from: http://githubengineering.com/browser-monitoring-for-github-com/
 
-## TODO:
+## To do:
 
-* Report standard meta data such as the URL, the browser, the OS etc.
+* Report standard meta data such as the URL, the browser, the OS etc
 * Allow custom meta data to be reported
 * Provide a generic API for generic performance reporting (mostly done)
 * Add plugins for reporting other common performance concerns (e.g: AJAX, React, Angular, Ember, Backbone)
-* Support Asynchronous loading.
-* Implement the backend for this.
+* Support Asynchronous loading
+* Implement the backend for this
