@@ -42,7 +42,7 @@ You should then include the JavaScript inside the `<head>`, along with some conf
 
 `npm run build` creates a JavaScript file that is less than 3KB.  Having said that, performance will be affected in a tiny way because the JavaScript is not loaded asynchronously.  I should be able to support asynchronous loading in future, but for now you should do your own tests (or submit a PR adding asynchronous loading).
 
-### What Performance does this monitor?
+## What Performance does this monitor?
 
 I’ve tried to reduce the number of stats to those that I deem useful, specifically:
 
@@ -72,11 +72,11 @@ decoded:
 http://yourendpoint.com/?sessionId=55967c62-0b6a-4aaf-adb6-c8cf1bd7b34e&events={"unit":"ms","tag":"load","x":1472464023528,"y":{"unloadEnd":16,"redirectEnd":0,"requestStart":9,"responseEnd":16,"domLoading":23,"domInteractive":242,"domContentLoadedEnd":243,"domComplete":270,"loadEnd":274}}
 ````
 
-### Inspiration
+## Inspiration
 
 This code has learnt a lot from: http://githubengineering.com/browser-monitoring-for-github-com/
 
-### TODO:
+## TODO:
 
 * Report standard meta data such as the URL, the browser, the OS etc.
 * Allow custom meta data to be reported
