@@ -35,7 +35,7 @@ You should then include the JavaScript inside the `<head>`, along with some conf
 <script src="[2]"></script>
 ````
 
-* [1]: The endpoint for your own customer monitoring solution.
+* [1]: The endpoint for your own custom monitoring solution.
 * [2]: The location of `build/bundle.js` on your server.
 
 ## Will this affect performance?
