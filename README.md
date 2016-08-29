@@ -58,10 +58,18 @@ I’ve tried to reduce the number of stats to those that I deem useful, specific
 
 Performance is reported with a sessionId so you should be able to track the same session to multiple page loads.
 
-To store this data you will need to implement your own backend. This would be an API endpoint which accepts post requests and parses the data in the following format:
+To store this data you will need to implement your own backend. This would be an API endpoint which accepts post requests and parses the data in the following format.
+
+encoded:
 
 ````
 http://yourendpoint.com/?sessionId=55967c62-0b6a-4aaf-adb6-c8cf1bd7b34e&events={%22unit%22:%22ms%22,%22tag%22:%22load%22,%22x%22:1472464023528,%22y%22:{%22unloadEnd%22:16,%22redirectEnd%22:0,%22requestStart%22:9,%22responseEnd%22:16,%22domLoading%22:23,%22domInteractive%22:242,%22domContentLoadedEnd%22:243,%22domComplete%22:270,%22loadEnd%22:274}}
+````
+
+decoded:
+
+````
+http://yourendpoint.com/?sessionId=55967c62-0b6a-4aaf-adb6-c8cf1bd7b34e&events={"unit":"ms","tag":"load","x":1472464023528,"y":{"unloadEnd":16,"redirectEnd":0,"requestStart":9,"responseEnd":16,"domLoading":23,"domInteractive":242,"domContentLoadedEnd":243,"domComplete":270,"loadEnd":274}}
 ````
 
 ### Inspiration
