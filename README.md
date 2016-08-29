@@ -26,14 +26,14 @@ Building:
 
 You should then include the JavaScript inside the `<head>`, along with some configuration:
 
-``
+````
 <script>
   PagePerf = {
     endpoint: '[1]'
   };
 </script>
 <script src="[2]"></script>
-``
+````
 
 * [1]: The endpoint for your own customer monitoring solution.
 * [2]: The location of `build/bundle.js` on your server.
@@ -60,9 +60,9 @@ Performance is reported with a sessionId so you should be able to track the same
 
 To store this data you will need to implement your own backend. This would be an API endpoint which accepts post requests and parses the data in the following format:
 
-``
+````
 http://yourendpoint.com/?sessionId=55967c62-0b6a-4aaf-adb6-c8cf1bd7b34e&events={%22unit%22:%22ms%22,%22tag%22:%22load%22,%22x%22:1472464023528,%22y%22:{%22unloadEnd%22:16,%22redirectEnd%22:0,%22requestStart%22:9,%22responseEnd%22:16,%22domLoading%22:23,%22domInteractive%22:242,%22domContentLoadedEnd%22:243,%22domComplete%22:270,%22loadEnd%22:274}}
-``
+````
 
 ### Inspiration
 
